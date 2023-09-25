@@ -19,15 +19,14 @@ sh fake.sh down
 ``` 
 
 ## Fake - F# Make
-[FAKE](https://fake.build/)とは、型安全・宣言的にビルドタスクを定義するF#ツールです。
+[FAKE](https://fake.build/)とは、F#によりビルドタスクを型安全・宣言的に定義するツールです。
 
-使い方に関しては[公式ドキュメント](https://fake.build/guide/getting-started.html)が参考になります。ただし、https://github.com/fsprojects/FAKE/issues/2719 で報告される問題を回避するため、`.NET 7`以上のバージョンを使用するときは、以下のように`build.fsx`を記述してください。
+使い方に関しては[公式ドキュメント](https://fake.build/guide/getting-started.html)が参考になります。ただし、https://github.com/fsprojects/FAKE/issues/2719 に報告される問題を回避するため、`.NET 7`以上のバージョンを使用する際は、以下のように`build.fsx`を記述してください。
 
 ```fsharp
 #r "nuget: Fake.Core.Target"
 
 open Fake.Core
-open System.IO
 
 // Boilerplate
 System.Environment.GetCommandLineArgs()
